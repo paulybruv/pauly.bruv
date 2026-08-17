@@ -89,6 +89,11 @@ Wireframes were produced during the initial UX planning stage to map out respons
 - Tested on Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
 - Navigation collapse toggle functions correctly on smaller screens.
 
+### Code Validation
+
+- **W3C HTML Validator:** Passed with 0 errors and 0 warnings.
+- **W3C CSS (Jigsaw) Validator:** Passed with 0 errors and 0 warnings.
+
 ### Form Verification
 
 - Required input attributes prevent empty form submissions.
