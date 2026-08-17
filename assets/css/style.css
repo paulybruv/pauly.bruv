@@ -1,0 +1,171 @@
+/* ==========================================================================
+   1. Root Variables & Global Resets
+   ========================================================================== */
+
+:root {
+  /* Brand Palette: Dark slate, warm workshop accent, neutral backgrounds */
+  --primary-color: #1a1a1a;
+  --primary-hover: #333333;
+  --accent-color: #8c6d46; /* Warm bronze / timber tone */
+  --bg-light: #f8f9fa;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --font-heading: "Noto Serif Display", Georgia, serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Smoothly slides the viewport when clicking jump links */
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: #ffffff;
+  line-height: 1.6; /* Standard accessible line height for readability */
+}
+
+/* Apply editorial serif styling to all heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* --- Global Link Styling & Hover --- */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color); /* Switches to warm timber/bronze tone */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px; /* Leaves breathing room between text and line */
+}
+
+/* ==========================================================================
+   2. Navbar Styling
+   ========================================================================== */
+
+.navbar-brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+}
+
+/* Navbar Brand Logo */
+.navbar-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+/* Subtle micro-interaction on brand hover */
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-muted) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color) !important;
+}
+
+/* ==========================================================================
+   3. Hero Section & Action Buttons
+   ========================================================================== */
+
+.bg-light-section {
+  background-color: var(--bg-light);
+}
+
+.card-img-hero {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Primary Dark Action Button */
+.btn-custom {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none !important;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Secondary Outlined Action Button */
+.btn-outline-custom {
+  background-color: transparent;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none !important;
+}
+
+.btn-outline-custom:hover,
+.btn-outline-custom:focus {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. Featured Products Showcase Cards
+   ========================================================================== */
+
+/* The Card Container */
+.custom-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover Lift Effect */
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Uniform Image Framing */
+.card-img-custom {
+  height: 220px;
+  object-fit: cover;
+  background-color: #f1f3f5;
+}

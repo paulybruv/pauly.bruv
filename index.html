@@ -55,48 +55,57 @@
   </head>
   <body>
     <!-- Main Sticky Navigation -->
-    <nav
-      class="navbar navbar-expand-lg border-bottom sticky-top shadow-sm py-3 bg-white"
-      aria-label="Main Navigation"
-    >
-      <div class="container-fluid px-4">
-        <a class="navbar-brand d-flex align-items-center" href="#hero">
-          <span class="fw-bold tracking-tight">PAULY BRUV ENGRAVING</span>
-        </a>
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand-lg border-bottom shadow-sm py-3 bg-white"
+        aria-label="Main Navigation"
+      >
+        <div class="container-fluid px-4">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img
+              src="assets/images/logo.svg"
+              alt="Pauly Bruv Engraving Logo"
+              class="navbar-logo"
+            />
+            <span class="fw-bold tracking-tight">PAULY BRUV ENGRAVING</span>
+          </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#workshopNav"
-          aria-controls="workshopNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#workshopNav"
+            aria-controls="workshopNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="workshopNav">
-          <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About the Maker</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#socials">Follow Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-custom px-3 ms-lg-2" href="#contact"
-                >Custom Quote</a
-              >
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="workshopNav">
+            <ul class="navbar-nav ms-auto gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About the Maker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#socials">Follow Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-custom px-3 ms-lg-2" href="#contact"
+                  >Custom Quote</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero" class="py-5 bg-light-section">
@@ -131,6 +140,85 @@
         </div>
       </div>
     </section>
+
+    <!-- Main Content / Featured Products Section -->
+    <main class="container py-5" id="products">
+      <section class="text-center mb-5">
+        <h2 class="mb-3">Bespoke Laser Crafted Goods</h2>
+        <p class="text-secondary mb-5">
+          Explore our core product ranges or get in touch to submit your own
+          custom design for a quote.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Product 1: 3D Street Signs -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card custom-card h-100 bg-white">
+              <img
+                src="assets/images/mdf-sign.jpg"
+                alt="Custom laser cut 3D layered MDF street sign"
+                class="card-img-top p-3 rounded-4 card-img-custom"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">3D Layered Street Signs</h3>
+                <p class="fw-bold text-dark fs-5">From £25.00</p>
+                <p class="text-secondary small mb-4">
+                  395x98.75mm dual-layer MDF signs customized with your own
+                  street name or home bar layout.
+                </p>
+                <a href="#contact" class="btn btn-custom mt-auto"
+                  >Design Your Sign</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Product 2: Tactical Coasters -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card custom-card h-100 bg-white">
+              <img
+                src="assets/images/tac-coaster.jpg"
+                alt="Tactical football match slate coasters set of 4"
+                class="card-img-top p-3 rounded-4 card-img-custom"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Tactical Slate Coasters</h3>
+                <p class="fw-bold text-dark fs-5">From £12.00 (Set of 4)</p>
+                <p class="text-secondary small mb-4">
+                  Precision etched natural slate featuring famous tactical goal
+                  routes and match scorelines.
+                </p>
+                <a href="#contact" class="btn btn-custom mt-auto"
+                  >View Goal Sets</a
+                >
+              </div>
+            </article>
+          </div>
+
+          <!-- Product 3: Brummie Slang Magnets -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card custom-card h-100 bg-white">
+              <img
+                src="assets/images/slang-mags.jpg"
+                alt="Brummie slang laser cut wooden organic fridge magnets"
+                class="card-img-top p-3 rounded-4 card-img-custom"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Brummie Slang Magnets</h3>
+                <p class="fw-bold text-dark fs-5">From £4.00</p>
+                <p class="text-secondary small mb-4">
+                  Layered organic wood magnets featuring classic local sayings
+                  like "Alright Bab" and "Jeezy Peeps".
+                </p>
+                <a href="#contact" class="btn btn-custom mt-auto"
+                  >Browse Magnets</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Bootstrap Bundle JS (Required for mobile menu toggle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
