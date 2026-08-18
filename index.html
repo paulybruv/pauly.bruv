@@ -32,7 +32,15 @@
       property="og:description"
       content="High-precision laser-etched slate, timber, and custom keepsakes tailored to your vision."
     />
-    <meta property="og:image" content="assets/images/hero-banner.jpg" />
+    <meta property="og:image" content="assets/images/hero-banner.webp" />
+
+    <!-- Preload Hero LCP Asset -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero-banner.webp"
+      type="image/webp"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,6 +78,8 @@
               src="assets/images/logo.svg"
               alt="Pauly Bruv Engraving Logo"
               class="navbar-logo"
+              width="36"
+              height="36"
             />
             <span class="fw-bold tracking-tight">PAULY BRUV ENGRAVING</span>
           </a>
@@ -161,6 +171,9 @@
                   src="assets/images/hero-banner.webp"
                   alt="Set of laser-engraved tactical football slate coasters with Dad mug"
                   class="img-fluid rounded-4 shadow-sm card-img-hero w-100"
+                  width="600"
+                  height="450"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -187,8 +200,11 @@
               <article class="card custom-card h-100 bg-white">
                 <img
                   src="assets/images/mdf-sign.jpg"
+                  loading="lazy"
                   alt="Custom laser cut 3D layered MDF street sign"
                   class="card-img-top p-3 rounded-4 card-img-custom"
+                  width="400"
+                  height="300"
                 />
                 <div class="card-body d-flex flex-column text-center">
                   <h3 class="h5">3D Layered Street Signs</h3>
@@ -209,8 +225,11 @@
               <article class="card custom-card h-100 bg-white">
                 <img
                   src="assets/images/tac-coaster.jpg"
+                  loading="lazy"
                   alt="Tactical football match slate coasters set of 4"
                   class="card-img-top p-3 rounded-4 card-img-custom"
+                  width="400"
+                  height="300"
                 />
                 <div class="card-body d-flex flex-column text-center">
                   <h3 class="h5">Tactical Slate Coasters</h3>
@@ -231,8 +250,11 @@
               <article class="card custom-card h-100 bg-white">
                 <img
                   src="assets/images/slang-mags.jpg"
+                  loading="lazy"
                   alt="Brummie slang laser cut wooden organic fridge magnets"
                   class="card-img-top p-3 rounded-4 card-img-custom"
+                  width="400"
+                  height="300"
                 />
                 <div class="card-body d-flex flex-column text-center">
                   <h3 class="h5">Brummie Slang Magnets</h3>
@@ -295,29 +317,41 @@
                     <div class="carousel-item active" data-bs-interval="4000">
                       <img
                         src="assets/images/man-cave.jpg"
+                        loading="lazy"
                         class="d-block w-100 carousel-custom-img"
                         alt="Custom laser-engraved wooden sign displayed in a bar setting"
+                        width="600"
+                        height="400"
                       />
                     </div>
                     <div class="carousel-item" data-bs-interval="4000">
                       <img
                         src="assets/images/council-wax-stand.jpg"
+                        loading="lazy"
                         class="d-block w-100 carousel-custom-img"
                         alt="Bespoke laser-cut Council Wax point of sale display stand"
+                        width="600"
+                        height="400"
                       />
                     </div>
                     <div class="carousel-item" data-bs-interval="4000">
                       <img
                         src="assets/images/goblin-stand.jpg"
+                        loading="lazy"
                         class="d-block w-100 carousel-custom-img"
                         alt="Custom laser-crafted Goblin brand merchandise display"
+                        width="600"
+                        height="400"
                       />
                     </div>
                     <div class="carousel-item" data-bs-interval="4000">
                       <img
                         src="assets/images/veon-stand-set.png"
+                        loading="lazy"
                         class="d-block w-100 carousel-custom-img"
                         alt="Precision laser-cut Veon product display set"
+                        width="600"
+                        height="400"
                       />
                     </div>
                   </div>
