@@ -83,28 +83,52 @@ Wireframes were produced during the initial UX planning stage to map out respons
 
 ## Testing & Validation
 
-### Responsiveness & Browser Compatibility
+### Lighthouse Quality & Performance Audits
 
-- Tested across mobile (320px–480px), tablet (768px–1024px), and desktop viewports (1200px+).
-- Tested on Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
-- Navigation collapse toggle functions correctly on smaller screens.
+Audits were conducted using Google Chrome DevTools to measure performance, accessibility, best practices, and SEO across both Desktop and throttled Mobile profiles:
+
+| Environment | Performance | Accessibility | Best Practices | SEO | Core Web Vitals Summary |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Desktop** | **98** | **96** | **100** | **100** | **FCP:** 0.9s \| **LCP:** 0.9s \| **TBT:** 0ms \| **CLS:** 0.005 |
+| **Mobile** | **84** | **96** | **100** | **100** | **FCP:** 2.1s \| **LCP:** 4.3s \| **TBT:** 0ms \| **CLS:** 0.001 |
+
+#### Performance Optimizations Implemented
+- **Hero LCP Preloading:** Configured `<link rel="preload" as="image" ... fetchpriority="high">` to discover and fetch the primary banner image on initial parse.
+- **Image Compression & WebP Conversion:** Converted key raster assets to modern WebP format and scaled dimensions, cutting initial load payload by over 90%.
+- **Native Lazy Loading:** Applied `loading="lazy"` to below-the-fold product cards and carousel imagery to defer offscreen downloads.
+- **Cumulative Layout Shift (CLS) Prevention:** Explicit `width` and `height` dimensional attributes declared on all image tags.
+
+---
 
 ### Code Validation
 
-- **W3C HTML Validator:** Passed with 0 errors and 0 warnings.
-- **W3C CSS (Jigsaw) Validator:** Passed with 0 errors and 0 warnings.
+- **W3C Nu HTML Checker:** Passed with **0 errors and 0 warnings**.
+- **W3C CSS Validation Service (Jigsaw):** Passed with **0 errors** (validated to CSS Level 3 + SVG).
+  - *Note on CSS Warnings:* 2 warnings pertain to dynamic CSS custom properties (`var(--...)`), and 1 informational warning notes identical `background-color` and `border-color` pairing on hover states.
+
+---
+
+### Responsiveness & Cross-Browser Testing
+
+- Tested across small mobile (320px–480px), tablet (768px–1024px), and desktop viewports (1200px+).
+- Verified compatibility and visual consistency across Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
+- Responsive hamburger menu navigation and interactive touch carousel slides verified on touchscreen devices.
+
+---
 
 ### Form Verification
 
-- Required input attributes prevent empty form submissions.
-- Submitting the quote form redirects to `thank-you.html` with a clear confirmation message and a "Return Home" back button.
+- HTML5 validation constraints (`required` attributes and `type="email"`) ensure complete submissions.
+- Form submissions redirect to `thank-you.html` with a clear confirmation state and navigation back to the workshop homepage.
+
+---
 
 ### Accessibility (a11y)
 
-- All images include descriptive `alt` attributes.
-- Form inputs are paired with accessible `<label>` elements.
-- Social and external links include appropriate `aria-label` and security attributes.
-- High color contrast ratios between text and background surfaces ensure readability.
+- Semantic HTML5 landmark structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+- Form controls paired with explicit `<label for="...">` tags.
+- Descriptive `alt` text provided on all meaningful images.
+- Outbound external links secured with `rel="noopener noreferrer"` attributes.
 
 ---
 
@@ -113,7 +137,7 @@ Wireframes were produced during the initial UX planning stage to map out respons
 1. The project repository is hosted on **GitHub**.
 2. Live deployment is published via **GitHub Pages**:
    - Repository settings > **Pages** > Branch set to `main` / `root`.
-   - Live URL: `https://paulybruv.github.io/`
+   - Live URL: [https://paulybruv.github.io/pauly.bruv/](https://paulybruv.github.io/pauly.bruv/)
 
 ---
 
