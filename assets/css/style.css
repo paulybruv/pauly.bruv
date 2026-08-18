@@ -252,3 +252,41 @@ h6,
   border-color: var(--accent-color);
   box-shadow: 0 0 0 0.25rem rgba(140, 109, 70, 0.15);
 }
+/* ==========================================================================
+   Mobile Navigation & Spacing Polish
+   ========================================================================== */
+
+/* Keep Navbar Brand & Toggler aligned on one line */
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 400px) {
+  .navbar-brand span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tighten vertical spacing on small screens */
+@media (max-width: 767.98px) {
+  section.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .section-panel {
+    padding: 1.5rem !important;
+  }
+}
