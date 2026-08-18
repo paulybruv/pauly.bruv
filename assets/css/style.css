@@ -256,20 +256,32 @@ h6,
    Mobile Navigation & Spacing Polish
    ========================================================================== */
 
-/* Keep Navbar Brand & Toggler aligned on one line */
-.navbar .container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-
+/* Keep Logo/Brand on the left and Hamburger on the right */
 .navbar-brand {
   font-size: 1rem;
-  max-width: 80%;
+  max-width: 75%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Allow the dropdown menu to break onto its own full row */
+.navbar .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Center menu links and give them breathing room when expanded */
+.navbar-collapse {
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 0;
 }
 
 /* Extra small mobile adjustments */
