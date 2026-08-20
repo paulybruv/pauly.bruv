@@ -13,8 +13,9 @@ Pauly Bruv Engraving is a responsive, single-page showcase and custom quote requ
 5. [Features & Structure](#features--structure)
 6. [Technologies Used](#technologies-used)
 7. [Testing & Validation](#testing--validation)
-8. [Deployment](#deployment)
-9. [Credits & Acknowledgments](#credits--acknowledgments)
+8. [Bugs & Debugging](#bugs--debugging)
+9. [Deployment](#deployment)
+10. [Credits & Acknowledgments](#credits--acknowledgments)
 
 ---
 
@@ -129,6 +130,17 @@ Audits were conducted using Google Chrome DevTools to measure performance, acces
 - Form controls paired with explicit `<label for="...">` tags.
 - Descriptive `alt` text provided on all meaningful images.
 - Outbound external links secured with `rel="noopener noreferrer"` attributes.
+
+---
+
+## Bugs & Debugging
+
+| Issue / Bug | Root Cause | Resolution |
+| :--- | :--- | :--- |
+| **Mobile Navbar Overflow (320px Viewports)** | Long brand text combined with toggler button exceeded minimum screen width, pushing the hamburger icon onto a second line. | Added a targeted media query (`@media (max-width: 380px)`) to adjust container padding and scale down the brand font size cleanly on ultra-narrow displays. |
+| **W3C Void Element Syntax Warnings** | Self-closing trailing slashes (`/>`) were applied to HTML5 void elements (`<meta>`, `<link>`, `<img>`, `<input>`), triggering validator info warnings. | Adjusted editor formatting settings and stripped trailing slashes across all void tags to enforce valid HTML5 void syntax (`>`). |
+| **Mobile LCP Performance Bottleneck** | Large raw image assets created excessive transfer payloads on simulated slow 4G network profiles. | Converted the hero banner to WebP format, added high-priority preloading (`<link rel="preload">`), and applied native `loading="lazy"` across offscreen assets to reduce initial load payload by over 90%. |
+| **Jigsaw CSS Custom Property Warnings** | W3C CSS validator flagged CSS variables (`var(--...)`) due to runtime evaluation limitations. | Verified properties adhere to CSS Level 3 custom property specifications; confirmed zero syntax errors across the stylesheet. |
 
 ---
 
