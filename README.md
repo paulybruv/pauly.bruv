@@ -86,26 +86,34 @@ Wireframes were produced during the initial UX planning stage to map out respons
 
 ### Lighthouse Quality & Performance Audits
 
-Audits were conducted using Google Chrome DevTools to measure performance, accessibility, best practices, and SEO across both Desktop and throttled Mobile profiles:
+Audits were conducted using Google Chrome DevTools to measure performance, accessibility, best practices, and SEO across both Desktop and throttled Mobile profiles[cite: 3, 4]:
 
-| Environment | Performance | Accessibility | Best Practices | SEO | Core Web Vitals Summary |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Desktop** | **98** | **96** | **100** | **100** | **FCP:** 0.9s \| **LCP:** 0.9s \| **TBT:** 0ms \| **CLS:** 0.005 |
-| **Mobile** | **84** | **96** | **100** | **100** | **FCP:** 2.1s \| **LCP:** 4.3s \| **TBT:** 0ms \| **CLS:** 0.001 |
+| Environment | Performance | Accessibility | Best Practices | SEO | Core Web Vitals Summary | Full Report |
+| :--- | :---: | :---: | :---: | :---: | :--- | :---: |
+| **Desktop** | **98** | **96** | **100** | **100** | **FCP:** 0.9s \| **LCP:** 0.9s \| **TBT:** 0ms \| **CLS:** 0.005 | [📄 View Desktop PDF](assets/docs/desktop-lighthouse.pdf) |
+| **Mobile** | **84** | **96** | **100** | **100** | **FCP:** 2.1s \| **LCP:** 4.3s \| **TBT:** 0ms \| **CLS:** 0.001 | [📄 View Mobile PDF](assets/docs/mobile-lighthouse.pdf) |
 
 #### Performance Optimizations Implemented
-- **Hero LCP Preloading:** Configured `<link rel="preload" as="image" ... fetchpriority="high">` to discover and fetch the primary banner image on initial parse.
+- **Hero LCP Preloading:** Configured `<link rel="preload" as="image" ... fetchpriority="high">` to discover and fetch the primary banner image on initial parse[cite: 3, 4].
 - **Image Compression & WebP Conversion:** Converted key raster assets to modern WebP format and scaled dimensions, cutting initial load payload by over 90%.
 - **Native Lazy Loading:** Applied `loading="lazy"` to below-the-fold product cards and carousel imagery to defer offscreen downloads.
-- **Cumulative Layout Shift (CLS) Prevention:** Explicit `width` and `height` dimensional attributes declared on all image tags.
+- **Cumulative Layout Shift (CLS) Prevention:** Explicit `width` and `height` dimensional attributes declared on all image tags[cite: 3, 4].
 
 ---
 
 ### Code Validation
 
-- **W3C Nu HTML Checker:** Passed with **0 errors and 0 warnings**.
-- **W3C CSS Validation Service (Jigsaw):** Passed with **0 errors** (validated to CSS Level 3 + SVG).
-  - *Note on CSS Warnings:* 2 warnings pertain to dynamic CSS custom properties (`var(--...)`), and 1 informational warning notes identical `background-color` and `border-color` pairing on hover states.
+#### W3C Nu HTML Checker
+Passed with **0 errors and 0 warnings**.
+
+![W3C HTML Validation Result](assets/images/html-validation.png)
+
+#### W3C CSS Validation Service (Jigsaw)
+Passed with **0 errors** (validated to CSS Level 3 + SVG).
+
+![W3C CSS Validation Result](assets/images/css-validation.png)
+
+- *Note on CSS Warnings:* 2 warnings pertain to dynamic CSS custom properties (`var(--...)`), and 1 informational warning notes identical `background-color` and `border-color` pairing on hover states.
 
 ---
 
