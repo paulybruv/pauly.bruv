@@ -15,7 +15,8 @@ Pauly Bruv Engraving is a responsive, single-page showcase and custom quote requ
 7. [Testing & Validation](#testing--validation)
 8. [Bugs & Debugging](#bugs--debugging)
 9. [Deployment](#deployment)
-10. [Credits & Acknowledgments](#credits--acknowledgments)
+10. [AI Implementation & Orchestration](#ai-implementation--orchestration)
+11. [Credits & Acknowledgments](#credits--acknowledgments)
 
 ---
 
@@ -158,6 +159,36 @@ Passed with **0 errors** (validated to CSS Level 3 + SVG).
 2. Live deployment is published via **GitHub Pages**:
    - Repository settings > **Pages** > Branch set to `main` / `root`.
    - Live URL: [https://paulybruv.github.io/pauly.bruv/](https://paulybruv.github.io/pauly.bruv/)
+
+---
+
+## AI Implementation & Orchestration
+
+Google Gemini was integrated throughout the development lifecycle as an interactive pair-programming assistant, supporting semantic structure planning, bug troubleshooting, performance tuning, and workflow optimization.
+
+### Code Creation & Structure
+
+- **Semantic Layout Scaffolding:** Used Gemini to plan and structure semantic HTML5 landmark tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) to establish a clean document hierarchy.
+- **Responsive Layouts & Components:** Consulted Gemini on structuring Bootstrap 5 responsive grid containers and styling the 3-column Featured Products cards and workshop showcase.
+- **Form Design:** Guided the setup of the custom quote request form, ensuring appropriate input types, explicit `<label>` bindings, and HTML5 validation attributes.
+
+### Debugging & Problem Solving
+
+- **Mobile Viewport Overflow:** Worked through layout overflow issues on ultra-narrow screens (320px), leading to a targeted `@media (max-width: 380px)` rule that scaled the brand typography and container padding.
+- **W3C Syntax Validation:** Used Gemini to diagnose trailing slash warnings on HTML5 void elements (`<meta>`, `<link>`, `<img>`, `<input>`), ensuring the markup validated cleanly with zero errors.
+- **Component Alignment:** Addressed responsive alignment quirks within the Bootstrap grid and custom card panels.
+
+### Performance & Optimization
+
+- **Core Web Vitals & LCP:** Analyzed mobile performance bottlenecks with Gemini, implementing `<link rel="preload" as="image" fetchpriority="high">` for the hero banner, WebP image conversion, and native lazy loading (`loading="lazy"`).
+- **Layout Shift Prevention:** Verified image dimensional attributes (`width` and `height`) to eliminate Cumulative Layout Shift (CLS).
+- **Accessibility Checks:** Evaluated colour contrast combinations against WCAG standards and ensured comprehensive `alt` descriptions on all workshop imagery.
+
+### Workflow Reflection
+
+Using Gemini as a pair-programming partner accelerated boilerplate setup, streamlined responsive troubleshooting, and provided clear optimization steps for Lighthouse audits. 
+
+While AI suggestions provided strong foundations, all code required hands-on testing, manual adjustments to match custom CSS rules, and verification across browser DevTools to ensure reliable implementation.
 
 ---
 
